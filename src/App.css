@@ -74,3 +74,22 @@ button:disabled { cursor: not-allowed; opacity: 0.5; }
   .hero { align-items: stretch; flex-direction: column; }
   .hero button { width: 100%; }
 }
+
+.wallet-actions {
+  display: grid;
+  gap: 8px;
+  min-width: 260px;
+}
+
+.wallet-address {
+  padding: 11px 14px;
+  border: 1px solid #dedede;
+  border-radius: 9px;
+  background: #fff;
+  overflow-wrap: anywhere;
+  text-align: center;
+}
+
+.disconnect {
+  background: #8b1e1e;
+}
