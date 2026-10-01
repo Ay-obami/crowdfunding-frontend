@@ -189,7 +189,7 @@ export default function App() {
           <p className="contract-address">{CONTRACT_ADDRESS}</p>
         </div>
         <button onClick={connectWallet}>
-          {account ? `${account.slice(0, 6)}...${account.slice(-4)}` : "Connect Wallet"}
+          {account || "Connect Wallet"}
         </button>
       </header>
 
