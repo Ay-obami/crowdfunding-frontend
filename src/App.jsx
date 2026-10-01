@@ -184,7 +184,6 @@ export default function App() {
     <main className="page">
       <header className="hero">
         <div>
-          <p className="eyebrow">Sepolia</p>
           <h1>CrowdFunding Frontend</h1>
           <p className="contract-address">{CONTRACT_ADDRESS}</p>
         </div>
@@ -201,7 +200,6 @@ export default function App() {
       {txHash && <p className="tx">Tx: {txHash}</p>}
 
       <section>
-        <h2>Read Functions</h2>
         <div className="grid">
           <article className="card">
             <h3>Next Campaign ID</h3>
@@ -238,7 +236,6 @@ export default function App() {
       </section>
 
       <section>
-        <h2>Write Functions</h2>
         <div className="grid">
           <article className="card wide">
             <h3>Create Campaign</h3>
