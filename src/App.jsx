@@ -71,6 +71,13 @@ export default function App() {
     }
   }
 
+  function disconnectWallet() {
+    setAccount("");
+    setSigner(null);
+    setMessage("Wallet disconnected.");
+    setTxHash("");
+  }
+
   function contract() {
     if (!signer) throw new Error("Connect your wallet first.");
     return new Contract(CONTRACT_ADDRESS, CROWDFUND_ABI, signer);
@@ -187,9 +194,14 @@ export default function App() {
           <h1>CrowdFunding Frontend</h1>
           <p className="contract-address">{CONTRACT_ADDRESS}</p>
         </div>
-        <button onClick={connectWallet}>
-          {account || "Connect Wallet"}
-        </button>
+        {account ? (
+          <div className="wallet-actions">
+            <div className="wallet-address">{account}</div>
+            <button className="disconnect" onClick={disconnectWallet}>Disconnect</button>
+          </div>
+        ) : (
+          <button onClick={connectWallet}>Connect Wallet</button>
+        )}
       </header>
 
       <div className="notice">
